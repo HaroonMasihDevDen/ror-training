@@ -1,0 +1,23 @@
+<h1>Article#index</h1>
+
+<h4>This is the list of all the articles.</h4>
+<ul>
+    <% @articles.each do |article| %>
+        <li>
+
+            <p>
+                <%= article.title%>
+            </p>
+
+            <p>
+                <%= article.body%>
+            </p>
+        </li>
+
+        <p>___________________________</p>
+        <a href="<%= article_path(article) %>">
+            <%= article.title %>
+
+        </a>
+        <%end%>
+</ul>
