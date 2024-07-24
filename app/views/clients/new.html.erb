@@ -1,0 +1,17 @@
+<h1>Create a new Client</h1>
+<%= form_with model: @clientz , url: "/clients/create" ,  method: :post do |form| %>
+    
+    <%= form.label :name, "Name:" %>
+    <%= form.text_field :name ,name: 'client[name]' %>
+    
+    <%= form.label :age, "Age:" %>
+    <%= form.text_field :age, name: 'client[age]' %>
+    
+    <%= form.label :status, "Status:" %>
+    <%= form.text_field :status ,name: 'client[status]'%>
+
+    <%= form.label :status, "Address:" %>
+    <%= form.text_field :status ,name: 'client[address]'%>
+    
+    <%= form.submit "Create new client" %>
+<% end %>

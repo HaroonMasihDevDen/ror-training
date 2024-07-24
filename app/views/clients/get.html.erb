@@ -1,0 +1,8 @@
+<h1>Get client name</h1>
+<%= @name %>
+<br>
+<%= @last_client.name %>
+<% flash.each do |key, message| %>
+      <div class="flash <%= key %>"><%= message %></div>
+    <% end %>
+    
