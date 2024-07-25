@@ -1,0 +1,22 @@
+
+
+<%= form_with do |form| %>
+    <%= form.check_box :pet_dog %>
+    <%= form.label :pet_dog, "I own a dog" %>
+    <%= form.check_box :pet_cat %>
+    <%= form.label :pet_cat, "I own a cat" %>
+    <br>
+    <%= form.select :city, ["Berlin", "Chicago", "Madrid"] %>
+    <br>
+    <%= form.select :city,
+      {
+        "Europe" => [ ["Berlin", "BE"], ["Madrid", "MD"] ],
+        "North America" => [ ["Chicago", "CHI"] ],
+      },
+      selected: "CHI" %>
+      <%= check_box_tag "accept" %>
+
+
+
+
+<%end%>

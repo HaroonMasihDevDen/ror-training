@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-
-  get "up" => "rails/health#show", as: :rails_health_check
-  root 'articles#index'
-  resources :articles do
-    resources :comments
-  end
+  root 'students#index'
+  get 'hello' => 'students#temp'
+  resources :students
+  # resources :articles
+  # resources :comments
 
 end
